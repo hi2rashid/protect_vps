@@ -7,8 +7,8 @@ Run these commands on your VPS to download the latest scripts from the repositor
 ### Using wget
 
 ```bash
-wget -O daily_malware_scan.sh https://raw.githubusercontent.com/hi2rashid/protect_vps/main/daily_malware_scan.sh
-wget -O system_health_check.sh https://raw.githubusercontent.com/hi2rashid/protect_vps/main/system_health_check.sh
+wget -O daily_malware_scan.sh https://raw.githubusercontent.com/hi2rashid/protect_vps/main/daily_malware_scan.sh && chmod +x daily_malware_scan.sh
+wget -O system_health_check.sh https://raw.githubusercontent.com/hi2rashid/protect_vps/main/system_health_check.sh && chmod +x system_health_check.sh
 ```
 ```bash
 curl -o daily_malware_scan.sh https://raw.githubusercontent.com/hi2rashid/protect_vps/main/daily_malware_scan.sh
