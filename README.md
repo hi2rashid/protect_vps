@@ -88,3 +88,7 @@ curl -o system_basic_check.sh https://raw.githubusercontent.com/hi2rashid/protec
 | **rkhunter**                      | Rootkit Hunter scans for rootkits, suspicious files, backdoors, and vulnerabilities     | `rkhunter` package                      |
 | **Lynis**                         | Security auditing and hardening tool that performs in-depth system checks               | `lynis` package                         |
 | **Linux Malware Detect (Maldet)** | Malware scanner focused on Linux servers, good at detecting trojans, viruses, and worms | Installed manually from source via wget |
+
+
+
+Someone else is doing it already https://github.com/vernu/vps-audit 
