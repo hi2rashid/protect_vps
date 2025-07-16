@@ -1,4 +1,4 @@
-Run this script
+Run this script (For Ubuntu / Debian systems)
 ## 1. System Check
 **./system_basic_check.sh**
 
