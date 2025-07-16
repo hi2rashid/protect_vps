@@ -33,3 +33,58 @@ curl -o system_health_check.sh https://raw.githubusercontent.com/hi2rashid/prote
 ```
 (crontab -l 2>/dev/null; echo "0 2 * * * /root/antivirus/daily_malware_scan.sh >> /root/antivirus/daily.log 2>&1") | crontab -
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+## System Basic Check Script — What It Checks
+
+* **Operating System Detection** (Ubuntu only)
+* **Hostname and Current Date/Time**
+* **Memory Usage Overview**
+* **Disk Usage on Root Partition**
+* **Network Interface Summary**
+* **Pending Package Updates**
+* **UFW Firewall Status and Activity**
+* **SSH Configuration:**
+
+  * SSH port number
+  * Root login permission
+  * Password authentication status
+* **Users with Shell Access**
+* **Listening TCP/UDP Ports and Services**
+* **Failed systemd Services**
+* **Reboot Requirement Status**
+* **Fail2ban Status (if installed)**
+* **Automatic Cleanup of Unused Packages**
+* **Listing of Large Files (>200 MB) for Review**
+
+
+*daily_malware_scan.sh *
+## Daily Malware Scan Script — What It Checks
+
+* **Updates ClamAV Virus Definitions**
+* **Runs ClamAV Scan (clamdscan) on System**
+* **Runs chkrootkit Rootkit Detection**
+* **Runs rkhunter Rootkit and Malware Check (with database update)**
+* **Runs Lynis Security Audit**
+* **Runs Linux Malware Detect (Maldet) Full Scan**
+* **Summarizes Scan Results and Alerts**
+* **Logs All Scan Outputs for Review**
+* 
+| Tool                              | Purpose / Function                                                                      | Installed via                           |
+| --------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------- |
+| **ClamAV**                        | Open-source antivirus engine to scan files and directories for malware                  | `clamav` package                        |
+| **chkrootkit**                    | Detects known rootkits by scanning system binaries and configs                          | `chkrootkit` package                    |
+| **rkhunter**                      | Rootkit Hunter scans for rootkits, suspicious files, backdoors, and vulnerabilities     | `rkhunter` package                      |
+| **Lynis**                         | Security auditing and hardening tool that performs in-depth system checks               | `lynis` package                         |
+| **Linux Malware Detect (Maldet)** | Malware scanner focused on Linux servers, good at detecting trojans, viruses, and worms | Installed manually from source via wget |
