@@ -15,6 +15,9 @@ curl -o daily_malware_scan.sh https://raw.githubusercontent.com/hi2rashid/protec
 curl -o system_health_check.sh https://raw.githubusercontent.com/hi2rashid/protect_vps/main/system_health_check.sh
 ```
 
+## How to run
+
+
 ## 1. System Check
 ```
 ./system_basic_check.sh
